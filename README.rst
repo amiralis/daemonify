@@ -1,4 +1,4 @@
-daemonify
+Daemonify
 =========
 
 .. image:: https://github.com/amiralis/daemonify/blob/master/include/daemonify.jpg
@@ -15,8 +15,14 @@ Usage
 .. code-block:: python
 
   from daemonify import Daemon
+  class App(Daemon):
+    def run(self):
+      # main logic goes here
+      pass
 
-
+  if __name__ == '__main__':
+    app = App('PID')
+    app.start()
 
 Installation
 ------------
